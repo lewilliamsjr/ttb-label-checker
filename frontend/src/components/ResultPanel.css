@@ -1,0 +1,219 @@
+.result-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+/* Status Banner */
+.status-banner {
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.status-approved { background: var(--approved-bg); border-bottom: 1px solid #b7e0c8; }
+.status-warning  { background: var(--warning-bg);  border-bottom: 1px solid #fcd9a8; }
+.status-rejected { background: var(--rejected-bg); border-bottom: 1px solid #f5c6c2; }
+
+.status-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.status-icon {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.status-approved .status-icon { color: var(--approved); }
+.status-warning  .status-icon { color: var(--warning); }
+.status-rejected .status-icon { color: var(--rejected); }
+
+.status-label {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.status-approved .status-label { color: var(--approved); }
+.status-warning  .status-label { color: var(--warning); }
+.status-rejected .status-label { color: var(--rejected); }
+
+.status-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.confidence {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.filename {
+  font-size: 13px;
+  color: var(--text-muted);
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Sections */
+.section {
+  padding: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+.section-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 14px;
+}
+
+/* Violations */
+.violations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.violation {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 6px;
+}
+
+.violation.error  { background: var(--rejected-bg); }
+.violation.warning { background: var(--warning-bg); }
+
+.violation-badge {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  padding: 3px 7px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.error-badge   { background: var(--rejected); color: white; }
+.warning-badge { background: var(--warning);  color: white; }
+
+.violation-field {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.violation-desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+/* Fields Grid */
+.fields-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.field-item {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+
+.field-item:last-child {
+  border-bottom: none;
+}
+
+.field-key {
+  padding: 10px 14px;
+  background: var(--bg);
+  font-weight: 600;
+  color: var(--text-secondary);
+  font-size: 13px;
+  border-right: 1px solid var(--border);
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.field-val {
+  padding: 10px 14px;
+  color: var(--text-primary);
+  font-size: 14px;
+}
+
+.field-missing {
+  color: var(--rejected);
+}
+
+.optional-tag {
+  font-size: 10px;
+  font-weight: 500;
+  background: var(--border);
+  color: var(--text-muted);
+  padding: 1px 5px;
+  border-radius: 4px;
+  margin-top: 2px;
+}
+
+.field-tag {
+  display: inline-flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tag-ok      { color: var(--approved); font-weight: 600; }
+.tag-warn    { color: var(--warning);  font-weight: 600; }
+.tag-missing { color: var(--rejected); font-weight: 600; }
+
+.warning-issues {
+  list-style: disc;
+  padding-left: 16px;
+  margin-top: 4px;
+}
+
+.warning-issues li {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--warning);
+}
+
+/* Notes */
+.notes-text {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  background: var(--bg);
+  padding: 12px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
